@@ -1,31 +1,50 @@
 import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import windowSize from 'react-window-size';
+import Dimensions from 'react-dimensions'
+import Videos from './videos';
+import windowDimensions from 'react-window-dimensions';
 
 class App extends Component {
+   constructor(props) {
+    console.log("inside App container", props);
+    super(props);
+    var path = window.location.pathname;
+    path = path.split("/");
+    this.state = {
+      path: null,     
+      data : ['ssFAkvLdH4g','StrbppmsZJw','fj-10lIrboM'],
+      current_video:'ssFAkvLdH4g',
+      count:0,
+
+    }
+    
+  }
+
+  changeVideoId(){
+    this.setState({
+      current_video : this.state.data[this.state.count+1]
+    });
+    this.state.count+=1;
+    console.log(' this.state.current_video', this.state.current_video);
+    return this.state.current_video;
+  }
+
+
   render() {
-    const opts = {
-      height: '600px',
-      width: '100%',
-      playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
-      }
-    };
+
     return (
       <div className="App">
-        <div>
-          <button type="button" >next trip</button>
+        <div  >
+          <button type="button"  onClick={() => console.log(' this.state.width height')}  >next trip</button>
         </div>
-        <YouTube
-          videoId="ssFAkvLdH4g"
-          opts={opts}
-          onReady={this._onReady}
-        />
+          <Videos/>
       </div>
 
     );
   }
 }
 
-export default App;
+export default windowDimensions()(App);
