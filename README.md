@@ -1,1 +1,1 @@
-![VS Code Jest Preview](http://gph.is/2bZ1XYk)
+![VS Code Jest Preview](https://media.giphy.com/media/ExYQhwnfUzgLm/giphy.gif)
