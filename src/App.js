@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import YouTube from 'react-youtube';
-import logo from './logo.svg';
-// import './App.css';
-import windowSize from 'react-window-size';
 import Dimensions from 'react-dimensions'
 import Videos from './videos';
 import windowDimensions from 'react-window-dimensions';
