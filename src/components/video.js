@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import YouTube from 'react-youtube';
 
 
- class Videos extends Component{
+ class Video extends Component{
   constructor(props) {
     super(props);
     console.log("inside league container", props);
@@ -59,4 +59,4 @@ import YouTube from 'react-youtube';
 }
 
 
- export default Videos;
+ export default Video;
