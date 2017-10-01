@@ -31,7 +31,7 @@ import YouTube from 'react-youtube';
       height: this.props.height,
       width: this.props.width,
       playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
+        // autoplay: 1  // commented for pause on open
       }
     
 
